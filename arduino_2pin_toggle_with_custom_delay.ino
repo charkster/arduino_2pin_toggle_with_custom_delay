@@ -1,4 +1,10 @@
-nMode(pin1, OUTPUT);
+// RP2350 Seeed Xiao 300MHz overclock
+const int pin1 = 26;  // Xiao D0, First pin to toggle immediately
+const int pin2 = 27;  // Xiao D1, Second pin to toggle after delay
+
+void setup() {
+  Serial.begin(115200);    // Open USB serial terminal
+  pinMode(pin1, OUTPUT);
   pinMode(pin2, OUTPUT);
   digitalWrite(pin1, HIGH);
   digitalWrite(pin2, LOW);
